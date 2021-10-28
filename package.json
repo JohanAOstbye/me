@@ -32,7 +32,7 @@
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "lintfix": "eslint src/**/*.js src/**/*.jsx --fix",
     "predeploy": "yarn build",
-    "deloy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
