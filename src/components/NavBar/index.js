@@ -16,22 +16,67 @@ const NavBar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>me</NavLogo>
+          <NavLogo
+            to='home'
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact={true}
+            offset={-80}
+          >
+            me
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <MenuIcon />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLink to='me'>me</NavLink>
+              <NavLink
+                to='me'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+              >
+                me
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='projects'>Projects</NavLink>
+              <NavLink
+                to='education'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+              >
+                Education
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='education'>Education</NavLink>
+              <NavLink
+                to='projects'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+              >
+                Projects
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to='letstalk'>Lets talk!</NavLink>
+              <NavLink
+                to='letstalk'
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+              >
+                Lets talk!
+              </NavLink>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

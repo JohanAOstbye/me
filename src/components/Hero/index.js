@@ -11,7 +11,7 @@ import video from '../../videos/hero.mp4';
 
 const Hero = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <HeroBg>
         <VideoBg autoPlay loop muted src={video} type='video/mp4' />
       </HeroBg>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import ClearIcon from '@mui/icons-material/Clear';
 import { Link as LinkRoute } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
+import { darkbg, lightText, primary, white } from '../cssConstants';
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -67,10 +68,10 @@ export const SideBtnWrapper = styled.div`
 
 export const SidebarRoute = styled(LinkRoute)`
   border-radius: 50px;
-  background: #01bf71;
+  background: ${primary};
   white-space: nowrap;
   padding: 16px 64px;
-  color: #010606;
+  color: ${lightText};
   font-size: 16px;
   outline: none;
   border: none;
@@ -80,7 +81,7 @@ export const SidebarRoute = styled(LinkRoute)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: ${white};
+    color: ${darkbg};
   }
 `;
