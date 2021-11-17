@@ -65,7 +65,8 @@ const Article = ({
                   <ButtonA
                     key={index}
                     href={button.link}
-                    darkTheme={darkTheme}
+                    darkTheme={!darkTheme}
+                    darkHover={!darkTheme}
                     big={button.big}
                     fontBig={button.fontBig}
                   >

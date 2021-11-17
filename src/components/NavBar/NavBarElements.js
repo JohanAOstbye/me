@@ -44,7 +44,7 @@ export const NavLogo = styled(LinkScroll)`
 export const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     display: block;
     position: absolute;
     top: 0;

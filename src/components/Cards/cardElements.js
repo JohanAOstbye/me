@@ -2,20 +2,13 @@ import styled from 'styled-components';
 import { darkbg } from '../cssConstants';
 
 export const CardContainer = styled.div`
-  height: 888px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: ${darkbg};
-
-  @media screen and (max-width: 768px) {
-    height: 1200px;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1400px;
-  }
+  padding: 2rem 0;
 `;
 
 export const CardWrapper = styled.div`

@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components';
 import { darkbg, lightText, primary, white } from '../cssConstants';
 

@@ -34,7 +34,7 @@ export const education = {
     {
       // eslint-disable-next-line quotes
       label: 'CV',
-      link: 'https://johanAostbye.github.io/',
+      link: 'https://johanAostbye.github.io/cv',
       scroll: false,
       big: false,
       fontBig: false,
