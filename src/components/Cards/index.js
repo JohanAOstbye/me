@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Card,
   CardMedia,
@@ -5,12 +6,23 @@ import {
   Typography,
   CardActions,
 } from '@mui/material';
-import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { ButtonA } from '../ButtonElements';
 import { TopLine } from '../Info/InfoElements';
 import { CardContainer, CardWrapper } from './cardElements';
 import { myapp } from '../../images';
+
+const CustomCard = styled(Card)`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+const CustomCardContent = styled(CardContent)`
+  height: max-content;
+  flex-grow: 2;
+`;
 
 const Cards = ({ id, title, cards }) => {
   return (
@@ -18,21 +30,21 @@ const Cards = ({ id, title, cards }) => {
       <TopLine>{title}</TopLine>
       <CardWrapper>
         {cards.map((card, index) => (
-          <Card key={index}>
+          <CustomCard key={index}>
             <CardMedia
               component='img'
               height='140'
               image={card.img ? card.img : myapp}
               alt={`image of ${card.title} project`}
             />
-            <CardContent>
+            <CustomCardContent>
               <Typography gutterBottom variant='h5' component='div'>
                 {card.title}
               </Typography>
               <Typography variant='body2' color='text.secondary'>
                 {card.description}
               </Typography>
-            </CardContent>
+            </CustomCardContent>
             <CardActions>
               <ButtonA
                 href={card.link}
@@ -43,7 +55,7 @@ const Cards = ({ id, title, cards }) => {
                 {card.linkLabel}
               </ButtonA>
             </CardActions>
-          </Card>
+          </CustomCard>
         ))}
       </CardWrapper>
     </CardContainer>
