@@ -5,7 +5,8 @@ import { darkbg, lightText, btn_primary, white } from './cssConstants';
 
 export const Button = styled.button`
   border-radius: 50px;
-  background: ${({ darkTheme }) => (darkTheme ? btn_primary : darkbg)};
+  background-image: ${({ darkTheme }) => (darkTheme ? btn_primary : 'none')};
+  background-color: ${({ darkTheme }) => (darkTheme ? 'transparent' : darkbg)};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
   color: ${({ darkTheme }) => (darkTheme ? darkbg : white)};
@@ -16,19 +17,26 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-transition: background-color 0.2s linear;
-  -moz-transition: background-color 0.2s linear;
-  -o-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  -o-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
 
   &:hover {
-    background: ${({ darkTheme }) => (darkTheme ? white : btn_primary)};
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? darkbg : 'transparent'};
+    background-image: ${({ darkTheme }) => (darkTheme ? 'none' : btn_primary)};
   }
 `;
 
 export const ButtonS = styled(Link)`
   border-radius: 50px;
-  background: ${({ darkTheme }) => (darkTheme ? btn_primary : darkbg)};
+  background-image: ${({ darkTheme }) => (darkTheme ? btn_primary : 'none')};
+  background-color: ${({ darkTheme }) => (darkTheme ? 'transparent' : darkbg)};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
   color: ${({ darkTheme }) => (darkTheme ? darkbg : white)};
@@ -39,19 +47,26 @@ export const ButtonS = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-transition: background-color 0.2s linear;
-  -moz-transition: background-color 0.2s linear;
-  -o-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  -o-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
 
   &:hover {
-    background: ${({ darkTheme }) => (darkTheme ? white : btn_primary)};
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? darkbg : 'transparent'};
+    background-image: ${({ darkTheme }) => (darkTheme ? 'none' : btn_primary)};
   }
 `;
 
 export const ButtonA = styled.a`
   border-radius: 50px;
-  background: ${({ darkTheme }) => (darkTheme ? btn_primary : darkbg)};
+  background-image: ${({ darkTheme }) => (darkTheme ? btn_primary : 'none')};
+  background-color: ${({ darkTheme }) => (darkTheme ? 'transparent' : darkbg)};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
   color: ${({ darkTheme }) => (darkTheme ? lightText : white)};
@@ -62,13 +77,19 @@ export const ButtonA = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-transition: background-color 0.2s linear;
-  -moz-transition: background-color 0.2s linear;
-  -o-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
+  -webkit-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  -o-transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
+  transition: background-color 0.5s, ease-in-out,
+    background-image 0.5s ease-in-out;
   text-decoration: none;
 
   &:hover {
-    background: ${({ darkTheme }) => (darkTheme ? darkbg : btn_primary)};
+    background-color: ${({ darkTheme }) =>
+      darkTheme ? darkbg : 'transparent'};
+    background-image: ${({ darkTheme }) => (darkTheme ? 'none' : btn_primary)};
   }
 `;
