@@ -1,6 +1,6 @@
 export const projectcards = {
   id: 'projects',
-  title: 'My current projects',
+  title: 'Ekstra links',
   cards: [
     {
       title: 'Drinksip',

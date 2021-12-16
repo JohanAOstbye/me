@@ -1,10 +1,10 @@
-import { edu, couch } from '../../images';
+import { edu, jogging } from '../../images';
 
 export const me = {
   id: 'me',
   darkTheme: true,
   topLine: 'My Interrests',
-  heading: 'Friends, coding and sports',
+  heading: 'Friends, dancing and sports',
   paragraps: [
     [
       'I usuall spend my time hanging out with my friends, while watching movies or series',
@@ -13,7 +13,7 @@ export const me = {
   ],
   buttonlabels: [],
   imgStart: false,
-  img: couch,
+  img: jogging,
   alt: 'education picture',
 };
 
@@ -23,25 +23,26 @@ export const education = {
   topLine: 'Education',
   heading: 'My education at NTNU and Nesodden',
   paragraps: [
-    ['Nesodden VGS - general education (2014-2017)'],
+    ['Talent investment in classical ballet in junior high school'],
+    ['Slottsfjellet VGS - General education (2016-2019)'],
     [
       'Norwegian University of Science and Technology:',
-      '- Bachelor in Informatics (2017-2021)',
-      '- Master in Informatics, databases and scearch (2021 - now)',
+      '- Year study, art history (2020-2021)',
+      '- Bachelor, Social and sports science (2021 - now)',
     ],
   ],
   buttonlabels: [
     {
       // eslint-disable-next-line quotes
       label: 'CV',
-      link: 'https://johanAostbye.github.io/cv',
+      link: './CV-2021-pdf',
       scroll: false,
       big: false,
       fontBig: false,
     },
     {
       // eslint-disable-next-line quotes
-      label: 'My projects',
+      label: 'More info',
       link: 'projects',
       scroll: true,
       big: false,

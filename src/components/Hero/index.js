@@ -16,11 +16,8 @@ const Hero = () => {
         <VideoBg autoPlay loop muted src={video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Johan August Østbye</HeroH1>
-        <HeroP>
-          Im a student at NTNU, Norway, studying databases and search,
-          informatics.
-        </HeroP>
+        <HeroH1>Anna-Lea Jørgensen Vittersø</HeroH1>
+        <HeroP>Im student at NTNU, studying social and sports science</HeroP>
         <HeroP>Scroll down to learn more about me!</HeroP>
       </HeroContent>
     </HeroContainer>
