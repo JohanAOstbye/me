@@ -1,52 +1,16 @@
 import * as React from 'react';
-import { motion, SVGMotionProps } from 'framer-motion';
 
-const Path = (
-  props: JSX.IntrinsicAttributes &
-    SVGMotionProps<SVGPathElement> &
-    React.RefAttributes<SVGPathElement>
-) => (
-  <motion.path
-    fill='transparent'
-    strokeWidth='3'
-    stroke='hsl(0, 0%, 18%)'
-    strokeLinecap='round'
-    {...props}
-  />
-);
-
-export const LogoIcon = ({
-  className,
-}: {
-  toggle: (i?: number | undefined) => void;
-  className?: string;
-}) => (
+export const LogoIcon = ({ className }: { className?: string }) => (
   <svg
-    width='23'
-    height='23'
-    viewBox='0 0 23 23'
-    onClick={() => {}}
+    width='227'
+    height='161'
+    viewBox='0 0 227 161'
+    xmlns='http://www.w3.org/2000/svg'
     className={className}
   >
-    <Path
-      variants={{
-        closed: { d: 'M 2 2.5 L 20 2.5' },
-        open: { d: 'M 3 16.5 L 17 2.5' },
-      }}
-    />
-    <Path
-      d='M 2 9.423 L 20 9.423'
-      variants={{
-        closed: { opacity: 1 },
-        open: { opacity: 0 },
-      }}
-      transition={{ duration: 0.1 }}
-    />
-    <Path
-      variants={{
-        closed: { d: 'M 2 16.346 L 20 16.346' },
-        open: { d: 'M 3 2.5 L 17 16.346' },
-      }}
-    />
+    <path d='M70.8081 140.397V109.962L30.8491 82.8395L70.8081 56.3382V26.3173L0 73.1086V92.7775L70.8081 140.397Z' />
+    <path d='M86.2671 148.54L98.4597 155.58C108.62 161.446 116.689 162.551 122.666 158.893C128.642 155.236 131.631 147.624 131.631 136.056V16.4759L107.425 2.50061V122.081C107.425 125.216 106.648 127.311 105.094 128.365C103.54 129.35 101.329 129.014 98.4597 127.357L86.2671 120.318V148.54Z' />
+    <path d='M86.2671 146.04L98.4597 153.079C108.62 158.945 116.689 160.05 122.666 156.393C128.642 152.735 131.631 145.123 131.631 133.555V13.9753L107.425 0V119.58C107.425 122.716 106.648 124.811 105.094 125.865C103.54 126.849 101.329 126.513 98.4597 124.857L86.2671 117.817V146.04Z' />
+    <path d='M155.281 142.122L226.089 94.5026V74.8337L155.281 28.0425V58.0634L195.24 84.5647L155.281 111.687V142.122Z' />
   </svg>
 );

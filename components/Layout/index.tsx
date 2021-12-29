@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className=' bg-stone-300 text-gray-900 min-h-screen'>
+    <div className=' bg-amber-50 text-gray-900 min-h-screen'>
       <Head />
       <Nav />
       {children}
