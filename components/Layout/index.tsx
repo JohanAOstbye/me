@@ -1,13 +1,20 @@
-import { ReactNode } from 'react';
+import React from 'react';
+import Footer from './Footer';
 import Head from './Head';
 import Nav from './Nav';
 
-const Layout = ({ children }: { children: ReactNode }) => {
+const Layout = ({
+  id,
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className=' bg-amber-50 text-gray-900 min-h-screen'>
+    <div className={`${className} text-gray-900 -z-50 min-h-screen`} {...props}>
       <Head />
       <Nav />
-      {children}
+      <main className=''>{children}</main>
+      <Footer />
     </div>
   );
 };

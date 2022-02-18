@@ -43,10 +43,11 @@ export const ItemList = ({
 }) => {
   return (
     <motion.ul variants={variants} className={className} transition={spring}>
-      <Item link={'#'} text={'Home'} />
-      <Item link={'#'} text={'Work'} />
-      <Item link={'#'} text={'About'} />
-      <Item link={'#'} text={'Blog'} />
+      <Item link={'/'} text={'Home'} />
+      <Item link={'/#projects'} text={'Projects'} />
+      <Item link={'/#education'} text={'Edu'} />
+      <Item link={'/about'} text={'About'} />
+      {/* <Item link={'#'} text={'Blog'} /> */}
     </motion.ul>
   );
 };
