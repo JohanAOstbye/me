@@ -41,7 +41,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Hero id='Home' />
-      <div className='bg-gradient-to-t from-black h-20 -mt-20'></div>
+      <div className='bg-gradient-to-t from-black h-20 -mt-20 lg:h-10 lg:-mt-10 xxl:hidden'></div>
       <Section id='projects' title='Projects'>
         <div className='w-full h-[calc(100%-80px)] flex gap-6 snap-x snap-mandatory overflow-x-auto scroll-mx-10'>
           {projects.map((project, index) => (
