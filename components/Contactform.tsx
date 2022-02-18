@@ -25,13 +25,15 @@ const Contactform = () => {
       });
       console.log(response);
       if (response.status == 200) {
-        reset();
+        // reset();
         toast(
           'success',
           'Thank you for contacting us, we will be in touch soon.'
         );
       }
-    } catch (err) {}
+    } catch (err) {
+      toast('warning', 'Some dum shit happened');
+    }
   }
 
   return (
@@ -125,7 +127,7 @@ const Contactform = () => {
       <div>
         <Button
           type='submit'
-          className='  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500'
+          className='focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500'
         >
           Submit
         </Button>

@@ -5,6 +5,7 @@ export function useToast() {
 
   function toast(type: string, message: string) {
     const id = Math.random().toString(36).substr(2, 9);
+
     dispatch({ type: 'ADD_TOAST', toast: { type, message, id } });
 
     setTimeout(() => {

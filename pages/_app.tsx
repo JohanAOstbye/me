@@ -5,12 +5,11 @@ import ToastContainer from '../components/elements/toast/ToastContainer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <ToastProvider>
-        <Component {...pageProps} />
-        <ToastContainer />
-      </ToastProvider>
-    </>
+    <ToastProvider>
+      <Component {...pageProps} />
+
+      <ToastContainer />
+    </ToastProvider>
   );
 }
 

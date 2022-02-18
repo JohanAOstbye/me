@@ -41,8 +41,8 @@ export default async function handler(
   const transporter = nodemailer.createTransport(transportoptions);
 
   try {
-    const emailRes = await transporter.sendMail({
-      from: 'johan@ostbye.dev',
+    await transporter.sendMail({
+      from: email,
       to: 'johan@ostbye.dev',
       subject: `Contact form submission from ${name}`,
       html: `<p>You have a new contact form submission</p><br>

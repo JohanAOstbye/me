@@ -37,6 +37,8 @@ function ToastReducer(
         id: string;
       }
 ) {
+  console.log(state.toasts);
+
   switch (action.type) {
     case 'ADD_TOAST': {
       return {
