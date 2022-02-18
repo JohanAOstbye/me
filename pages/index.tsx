@@ -4,8 +4,9 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import Project from '../components/Project';
 
-import { online, taco } from '../projects';
+import { cv, online, taco } from '../projects';
 import Contactform from '../components/Contactform';
+import { ButtonLink } from '../components/elements/Button';
 
 const projects = [
   {
@@ -13,27 +14,26 @@ const projects = [
     title: 'Tacomanager',
     link: { href: 'http://taco.ostbye.dev', text: 'taco.ostbye' },
     description:
-      'Tacomanager er en nettside lagd for kolletivet for å holde styr på hvem som skal være med på tacofredag:)',
+      'Tacomanager is a website just for organizing tacofriday with my friends:) Its built with Nextjs, Tailwindcss and mongodb',
   },
   {
     image: online,
-    title: 'Fakturainfo',
+    title: 'Invoiceinfo',
     link: {
       href: 'http://faktura.online.ntnu.no',
       text: 'faktura.online.ntnu',
     },
     description:
-      'En nettside for Online linjeforening som blir brukt til samle inn fakturainformasjon fra bedrifter',
+      'A webpage for collecting invoice information from companies that Online works with. Built with Gastby and Chakra UI, hosted on AWS',
   },
   {
-    image: online,
-    title: 'Fakturainfo',
+    image: cv,
+    title: 'My cv',
     link: {
-      href: 'http://faktura.online.ntnu.no',
-      text: 'faktura.online.ntnu',
+      href: 'http://cv.ostbye.dev',
+      text: 'cv.ostbye',
     },
-    description:
-      'En nettside for Online linjeforening som blir brukt til samle inn fakturainformasjon fra bedrifter',
+    description: 'My cv as webpage. Built with Gatsby and tailwind',
   },
 ];
 
@@ -41,6 +41,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Hero id='Home' />
+      <div className='bg-black h-96 -mt-10'></div>
       <Section id='projects' title='Projects'>
         <div className='w-full h-[calc(100%-80px)] flex gap-6 snap-x snap-mandatory overflow-x-auto scroll-mx-10'>
           {projects.map((project, index) => (
@@ -55,17 +56,21 @@ const Home: NextPage = () => {
           ))}
         </div>
       </Section>
-      <Section id='education' title='NTNU' subtitle='Education'>
+      {/* <Section id='education' title='NTNU' subtitle='Education'>
         {' '}
         hva er skole lol
-      </Section>
+      </Section> */}
       <Section
         id='contact'
         title='Lets get in touch!'
         subtitle='Contact me'
-        className='h-[84.99vh]'
+        className='h-[84.99vh] flex flex-col'
       >
         <Contactform />
+        <div className='mt-10 flex w-full justify-center items-center'>
+          <span className='mr-5 text-lg'>Or find my cv here:</span>
+          <ButtonLink link={'https://cv.ostbye.dev'}>My CV</ButtonLink>
+        </div>
       </Section>
     </Layout>
   );
