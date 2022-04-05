@@ -17,7 +17,7 @@ const Project = ({
       className={`${className} flex flex-col justify-between w-5/6 lg:w-5/12 snap-center shrink-0 rounded-2xl p-5 shadow-xl m-[calc(100%/12)] lg:m-[calc(100%/24)]`}
     >
       <h1 className='text-xl font-bold p-5'>{title}</h1>
-      <div className='relative w-full flex-grow'>
+      <div className='relative w-full flex-grow h-44'>
         <Image
           src={image}
           alt='picture of me'
