@@ -7,7 +7,7 @@ const Hero = ({ id }: { id: string }) => {
   return (
     <div
       id={id}
-      className='w-full flex flex-col items-end h-[calc(100vh-4rem)] lx:w-[1152px] m-auto'
+      className='w-full flex flex-col items-end h-[calc(100vh-4rem)] lx:w-[1152px] m-auto snap-start'
     >
       <div className='w-2/3 md:w-1/2 h-full flex flex-col items-center justify-around'>
         <div className='w-full flex flex-col pr-5 pl-12 mt-40'>

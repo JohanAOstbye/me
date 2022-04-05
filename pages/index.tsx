@@ -42,7 +42,7 @@ const Home: NextPage = () => {
     <Layout>
       <Hero id='Home' />
       <div className='bg-gradient-to-t from-black h-20 -mt-20 lg:h-10 lg:-mt-10 xxl:hidden'></div>
-      <Section id='projects' title='Projects'>
+      <Section id='projects' title='Projects' className='snap-start'>
         <div className='w-full h-[calc(100%-80px)] flex gap-6 snap-x snap-mandatory overflow-x-auto scroll-mx-10'>
           {projects.map((project, index) => (
             <Project
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
         id='contact'
         title='Lets get in touch!'
         subtitle='Contact me'
-        className='h-[84.99vh] flex flex-col'
+        className='h-full flex flex-col'
       >
         <Contactform />
         <div className='mt-10 flex w-full justify-center items-center'>

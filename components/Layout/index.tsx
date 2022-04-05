@@ -10,7 +10,7 @@ const Layout = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={`${className} text-gray-900 -z-50 min-h-screen`} {...props}>
+    <div className={`${className} text-gray-900 -z-50 h-screen`} {...props}>
       <Head />
       <Nav />
       <main className=''>{children}</main>
