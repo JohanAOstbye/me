@@ -1,7 +1,8 @@
-import React from 'react';
+import Canvas from 'components/three/canvas';
+import type { NextPage } from 'next';
 
-const Home = () => {
-  return <div>Home</div>;
+const Home: NextPage = () => {
+  return <Canvas></Canvas>;
 };
 
 export default Home;
