@@ -1,3 +1,15 @@
-# Create T3 App
+# Juans website:)
 
-This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
+## Style WOW
+
+### Fonts
+
+### Colors
+
+https://maketintsandshades.com/#003844,006c67,a8f9ff,f0a202,573c23
+
+#003844
+#006c67
+#a8f9ff
+#f0a202
+#573c23

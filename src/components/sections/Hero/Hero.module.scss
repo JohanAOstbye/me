@@ -1,3 +1,19 @@
+@use "styles/typography" as *;
+@use "styles/colors" as *;
+
 .hero {
   height: 100vh;
+  position: relative;
+}
+
+.heading {
+  @include type-heading-hero;
+  color: $marigold-200;
+  mix-blend-mode: difference;
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  right: 20%;
+  z-index: 1;
+  text-align: center;
 }
