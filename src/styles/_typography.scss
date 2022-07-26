@@ -1,3 +1,75 @@
+// font sizing
+
 @mixin type-heading-hero {
   font-size: 56px;
+  line-height: 70px;
+}
+
+@mixin type-heading-xl {
+  font-size: 64px;
+  line-height: 76px;
+}
+
+@mixin type-heading-l {
+  font-size: 56px;
+  line-height: 70px;
+}
+
+@mixin type-heading-m {
+  font-size: 48px;
+  line-height: 64px;
+}
+@mixin type-heading-s {
+  font-size: 40px;
+  line-height: 56px;
+}
+
+@mixin type-heading-xs {
+  font-size: 34px;
+  line-height: 44px;
+}
+
+@mixin type-heading-xxs {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+@mixin type-body-24 {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+@mixin type-body-22 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+@mixin type-body-20 {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin type-body-18 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin type-body-16 {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+@mixin type-body-14 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin type-body-12 {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin type-body-10 {
+  font-size: 10px;
+  line-height: 16px;
 }

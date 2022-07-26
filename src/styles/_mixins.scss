@@ -1,0 +1,155 @@
+@use './vars' as *;
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 20px;
+  grid-auto-flow: column;
+}
+
+@mixin content-wrapper(
+  $size: m,
+  $side: full,
+  $percent-width: 100%,
+  $spacing: s
+) {
+  @if ($side == left or $side == right) and $percent-width == 100% {
+    $percent-width: 50%;
+  }
+  $content-width: $content-max-width;
+
+  @if ($size == xl) {
+    $content-width: $content-xl-max-width;
+  }
+  @if $size == l {
+    $content-width: $content-l-max-width;
+  }
+  @if $size == m {
+    $content-width: $content-max-width;
+  }
+  @if $size == s {
+    $content-width: $content-s- max-width;
+  }
+  @if $size == xs {
+    $content-width: $content-xs-max-width;
+  }
+  @if $size == xxs {
+    $content-width: $content-xxs-max-width;
+  }
+
+  box-sizing: border-box;
+  max-width: $content-width;
+  margin-inline: auto;
+
+  @if $spacing == l {
+    padding-inline: $spacing--sm;
+
+    @include breakpoint-s {
+      padding-inline: $spacing--l;
+    }
+  }
+
+  @if $spacing == m {
+    padding-inline: $spacing--s;
+
+    @include breakpoint-s {
+      padding-inline: $spacing--m;
+    }
+  }
+
+  @if $spacing == s {
+    padding-inline: $spacing--xxs;
+
+    @include breakpoint-s {
+      padding-inline: $spacing--s;
+    }
+  }
+
+  @include breakpoint-sm {
+    //splitting the screen on mobile makes no sense
+    @if $percent-width != 100% {
+      @if $side == left {
+        // works as a min(240px, x%)
+        padding-right: min(
+          calc(100% - $spacing--xxl * 3),
+          (100% - $percent-width),
+          calc($content-width * (100% - $percent-width) / 100%)
+        ) !important;
+      } @else if $side == right {
+        padding-left: min(
+          calc(100% - $spacing--xxl * 3),
+          (100% - $percent-width),
+          calc($content-width * ($percent-width) / 100%)
+        ) !important;
+      }
+    }
+  }
+}
+// BREAKPOINTS
+
+@mixin breakpoint-xs {
+  @media screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin breakpoint-s {
+  @media screen and (min-width: $breakpoint-s) {
+    @content;
+  }
+}
+
+@mixin breakpoint-m {
+  @media screen and (min-width: $breakpoint-m) {
+    @content;
+  }
+}
+
+@mixin breakpoint-l {
+  @media screen and (min-width: $breakpoint-l) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+  @media screen and (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xxl {
+  @media screen and (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
+// style resets
+
+@mixin button-style-reset {
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  background: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  color: inherit;
+}
+
+@mixin link-style-reset {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+@mixin list-style-reset {
+  list-style: none;
+}
+
+@mixin input-style-reset {
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  &:focus {
+    outline: none;
+  }
+}

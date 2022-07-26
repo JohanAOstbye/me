@@ -3,8 +3,8 @@ import { extend, useFrame } from '@react-three/fiber';
 import glsl from 'babel-plugin-glsl/macro';
 import { useRef } from 'react';
 import * as THREE from 'three';
-import bubbles from 'assets/bubbles.jpg';
-import spaceman from 'assets/spaceman.jpg';
+import bubbles from 'assets/images/bubbles.jpg';
+import spaceman from 'assets/images/spaceman.jpg';
 
 const WaveShaderMaterial = shaderMaterial(
   // Uniforms

@@ -1,0 +1,44 @@
+$breakpoint-xs: 480px;
+$breakpoint-s: 640px;
+$breakpoint-m: 768px;
+$breakpoint-l: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1440px;
+
+$content-xl-max-width: 90rem;
+$content-l-max-width: 80rem;
+$content-max-width: 72rem;
+$content-s-max-width: 64rem;
+$content-xs-max-width: 48rem;
+$content-xxs-max-width: 42rem;
+
+$spacing--huge: convert-to-rem(96px);
+$spacing--xxxl: convert-to-rem(72px);
+$spacing--xxl: convert-to-rem(80px);
+$spacing--xl: convert-to-rem(64px);
+$spacing--l: convert-to-rem(48px);
+$spacing--m: convert-to-rem(32px);
+$spacing--sm: convert-to-rem(24px);
+$spacing--s: convert-to-rem(20px);
+$spacing--xs: convert-to-rem(16px);
+$spacing--xxs: convert-to-rem(12px);
+$spacing--xxxs: convert-to-rem(8px);
+$spacing--tiny: convert-to-rem(4px);
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function convert-to-rem($value, $base-value: $font-size-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+
+  @if ($value==0rem) {
+    $value: 0;
+  }
+
+  @return $value;
+}

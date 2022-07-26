@@ -1,4 +1,5 @@
 @use "./colors" as *;
+@import './fonts';
 
 * {
   box-sizing: border-box;
@@ -10,11 +11,15 @@ body,
 #fullheight {
   min-height: 100% !important;
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 300;
+  font-family: 'Kanit', sans-serif;
+  color: white;
   background-color: $t-dark-950;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
+
+// font imports
+// Chakra Petch
